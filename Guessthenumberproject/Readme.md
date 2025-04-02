@@ -26,24 +26,3 @@ This is a simple number-guessing game where the machine picks a secret number fr
    java Guess
    ```
 
-## 🛠️ Issues & Fixes
-🚨 **Potential Logical Issue**: The game allows only **3 attempts**, but the `life` variable starts at `1`, which might not align with typical game expectations where attempts decrease from a maximum number.
-
-✅ **Suggested Fix**: Instead of increasing `life`, start with `life = 3` and decrement it after each incorrect guess:
-```java
-int life = 3;
-while (guess_number != secret_number && life > 0) {
-    life--;
-    if (life == 0) {
-        break;
-    }
-    System.out.print("Try again: ");
-    guess_number = sc.nextInt();
-}
-```
-This ensures the game gives exactly **3 chances** before displaying a loss message.
-
-## ✉️ Feedback
-If you enjoyed the game or have suggestions, feel free to contribute or raise an issue!
-Happy coding! 😊
-
